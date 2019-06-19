@@ -1,0 +1,34 @@
+name: $(Date:yyyy).$(Month).$(DayOfMonth).$(rev:r)
+pool:
+  vmImage: ubuntu-16.04
+steps:
+  - script: dotnet build --configuration Release --force
+    workingDirectory: $(Build.SourcesDirectory)
+    displayName: Build Solution
+  
+  - script: dotnet test --logger trx
+    workingDirectory: $(Build.SourcesDirectory)
+    displayName: Run Tests
+
+  - task: PublishTestResults@2
+    displayName: Publish Test Results
+    inputs:
+      testResultsFormat: VSTest
+      testResultsFiles: '$(Build.SourcesDirectory)/**/*.trx'      
+
+  - task: DotNetCoreCLI@2
+    displayName: Create Package
+    inputs:
+      command: pack
+      packagesToPack: '$(Build.SourcesDirectory)/src/CSharpsi.FluentHttpClient/CSharpsi.FluentHttpClient.csproj'
+      packDirectory: '$(Build.ArtifactStagingDirectory)/package'
+      versioningScheme: byBuildNumber
+    timeoutInMinutes: 30
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathtoPublish: '$(Build.ArtifactStagingDirectory)/package'
+      artifactName: package
+
+
+
