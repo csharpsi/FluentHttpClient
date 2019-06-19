@@ -1,6 +1,6 @@
 name: $(Date:yyyy).$(Month).$(DayOfMonth).$(rev:r)
 pool:
-  vmImage: ubuntu-16.04
+  vmImage: windows-2019
 steps:
   - script: dotnet build --configuration Release --force
     workingDirectory: $(Build.SourcesDirectory)
