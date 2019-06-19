@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.452
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A759AAB0-40E5-48B2-AAE2-57862BBDC8C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{CCB739B7-3E1D-4811-9FC8-DB96E8AA898F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpsi.FluentHttpClient", "src\CSharpsi.FluentHttpClient\CSharpsi.FluentHttpClient.csproj", "{C5250258-2AC3-41D9-9560-8AD07852508C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpsi.FluentHttpClient.NetCore.Tests", "test\CSharpsi.FluentHttpClient.NetCore.Tests\CSharpsi.FluentHttpClient.NetCore.Tests.csproj", "{9B1B2071-ED3B-4EF7-9D38-5D861E0455EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpsi.FluentHttpClient.Net45.Tests", "test\CSharpsi.FluentHttpClient.Net45.Tests\CSharpsi.FluentHttpClient.Net45.Tests.csproj", "{CEEFC272-DEDB-4B5A-820A-62062CFDA21C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5250258-2AC3-41D9-9560-8AD07852508C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5250258-2AC3-41D9-9560-8AD07852508C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5250258-2AC3-41D9-9560-8AD07852508C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5250258-2AC3-41D9-9560-8AD07852508C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B1B2071-ED3B-4EF7-9D38-5D861E0455EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B1B2071-ED3B-4EF7-9D38-5D861E0455EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B1B2071-ED3B-4EF7-9D38-5D861E0455EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B1B2071-ED3B-4EF7-9D38-5D861E0455EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEEFC272-DEDB-4B5A-820A-62062CFDA21C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEEFC272-DEDB-4B5A-820A-62062CFDA21C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEEFC272-DEDB-4B5A-820A-62062CFDA21C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEEFC272-DEDB-4B5A-820A-62062CFDA21C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C5250258-2AC3-41D9-9560-8AD07852508C} = {A759AAB0-40E5-48B2-AAE2-57862BBDC8C1}
+		{9B1B2071-ED3B-4EF7-9D38-5D861E0455EA} = {CCB739B7-3E1D-4811-9FC8-DB96E8AA898F}
+		{CEEFC272-DEDB-4B5A-820A-62062CFDA21C} = {CCB739B7-3E1D-4811-9FC8-DB96E8AA898F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F33F63A-A8AB-410C-866F-FEEDC68AA867}
+	EndGlobalSection
+EndGlobal

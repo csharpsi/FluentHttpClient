@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+    <Authors>Simon Childs</Authors>
+    <Company>csharpsi</Company>
+    <Description>Extension methods that provide a fluent API to the native .NET HttpClient</Description>
+    <Copyright>Simon Childs</Copyright>
+    <RepositoryUrl>https://github.com/csharpsi/FluentHttpRequest</RepositoryUrl>
+    <TargetFrameworks>net45;netcoreapp1.1;netcoreapp2.1;netcoreapp2.2</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+  </ItemGroup>
+  
+  
+
+</Project>
