@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\CSharpsi.FluentHttpClient\CSharpsi.FluentHttpClient.csproj" />
+    <ProjectReference Include="..\CSharpsi.FluentHttpClient.TestFramework\CSharpsi.FluentHttpClient.TestFramework.csproj" />
   </ItemGroup>
 
 </Project>

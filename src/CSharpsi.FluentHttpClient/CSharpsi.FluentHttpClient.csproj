@@ -6,8 +6,8 @@
     <Company>csharpsi</Company>
     <Description>Extension methods that provide a fluent API to the native .NET HttpClient</Description>
     <Copyright>Simon Childs</Copyright>
-    <RepositoryUrl>https://github.com/csharpsi/FluentHttpRequest</RepositoryUrl>
-    <TargetFrameworks>net45;netcoreapp1.1;netcoreapp2.1;netcoreapp2.2</TargetFrameworks>
+    <RepositoryUrl>https://github.com/csharpsi/FluentHttpClient</RepositoryUrl>
+    <TargetFrameworks>net461;netcoreapp1.1;netcoreapp2.1;netcoreapp2.2</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>
