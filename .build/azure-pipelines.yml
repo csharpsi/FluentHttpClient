@@ -2,7 +2,12 @@ name: $(Date:yyyy).$(Month).$(DayOfMonth).$(rev:r)
 pool:
   vmImage: windows-2019
 steps:
-  - script: dotnet build --configuration Release --force
+  - task: NuGetRestore@1
+    displayName: "Restore Packages"
+    inputs:
+      solution: '**\*.sln'
+
+  - script: dotnet build --configuration Release --no-restore
     workingDirectory: $(Build.SourcesDirectory)
     displayName: Build Solution
   
