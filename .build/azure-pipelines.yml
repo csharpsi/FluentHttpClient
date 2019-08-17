@@ -2,18 +2,17 @@ name: $(Date:yyyy).$(Month).$(DayOfMonth).$(rev:r)
 pool:
   vmImage: windows-2019
 steps:
-  - task: NuGetRestore@1
-    displayName: "Restore Packages"
-    inputs:
-      solution: '**\*.sln'
-
-  - script: dotnet build --configuration Release --no-restore
+  - script: nuget restore FluentHttpClient.sln    
     workingDirectory: $(Build.SourcesDirectory)
-    displayName: Build Solution
+    displayName: Restore
+
+  - script: dotnet build --configuration Release
+    workingDirectory: $(Build.SourcesDirectory)
+    displayName: Build
   
   - script: dotnet test --logger trx
     workingDirectory: $(Build.SourcesDirectory)
-    displayName: Run Tests
+    displayName: Test
 
   - task: PublishTestResults@2
     displayName: Publish Test Results
@@ -34,6 +33,3 @@ steps:
     inputs:
       pathtoPublish: '$(Build.ArtifactStagingDirectory)/package'
       artifactName: package
-
-
-
