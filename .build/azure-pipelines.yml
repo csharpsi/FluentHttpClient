@@ -2,8 +2,10 @@ name: $(Date:yyyy).$(Month).$(DayOfMonth).$(rev:r)
 pool:
   vmImage: windows-2019
 steps:
-  - script: nuget restore FluentHttpClient.sln    
-    workingDirectory: $(Build.SourcesDirectory)
+  - task: NuGetCommand@2
+    inputs:
+      command: 'restore'
+      restoreSolution: FluentHttpClient.sln    
     displayName: Restore
 
   - script: dotnet build --configuration Release
